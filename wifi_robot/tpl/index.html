@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Document</title>
+<style type="text/css">
+* {-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-touch-callout: none; -webkit-user-select: none;}
+* {margin:0; padding:0;}
+#canvas, .button{display: block;}
+.button{width: 30px; height: 30px; text-decoration: none; color: #fff; text-align: center; line-height: 30px; background-color: #1fcccd;position: absolute; display: none;}
+#left, #right {left:10px; bottom:55px;}
+#right {left:100px;}
+#top, #bottom{left:55px; bottom:10px;}
+#top{bottom: 100px;}
+</style>
+<script src="{{static_url("jquery.js")}}"></script>
+<script src="{{static_url("sockjs.js")}}"></script>
+<script>
+//圆角矩形
+CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r, f) {
+	if (w < 2 * r) r = w / 2;
+	if (h < 2 * r) r = h / 2;
+	this.beginPath();
+	this.moveTo(x+r, y);
+	this.arcTo(x+w, y, x+w, y+h, r);
+	this.arcTo(x+w, y+h, x, y+h, r);
+	this.arcTo(x, y+h, x, y, r);
+	this.arcTo(x, y, x+w, y, r);
+	this.fillStyle = f;
+	// this.arcTo(x+r, y);
+	this.closePath();
+	return this;
+}
+
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+//w=480;
+//h=320;
+var conn = null;
+var img = new Image();
+var canvas = null;
+var video_stream = false;
+
+function log(msg) {
+	console.log(msg);
+}
+function connect() {
+	disconnect();
+
+	conn = new SockJS("http://"+window.location.host+"/camera", "websocket");
+	
+	log("connecting...");
+
+	conn.onopen = function(){
+		log("connected.")
+
+		document.getElementById("canvas").width = w;
+		document.getElementById("canvas").height = h;
+		conn.send(["init", w, h].join(","));
+	}
+
+	conn.onmessage = function(e){
+		if(!video_stream) {
+			video_stream = true;
+			videoInitSuccess();
+			$(".button").show();
+		}
+		var data = e.data;
+		if(data.indexOf("data:image") != -1) {
+			img.src =data;
+		}
+	}
+
+	conn.onclose = function(){
+		log("disconnected.");
+		conn = null;
+		setTimeout(function(){
+			connect();
+		},3000);
+	}
+}
+
+function videoInitSuccess() {}
+
+function disconnect() {
+	if(conn != null) {
+		log("disconnecting...");
+		conn.close();
+	}
+}
+
+function robot_control(direction) {
+	if(conn != null) {
+		conn.send(["robot_control", direction]);
+	}
+}
+
+setInterval(function(){
+	if(conn != null) {
+		conn.send(["video_stream"]);
+	}
+}, 100);
+
+$(function(){
+	canvas = document.getElementById("canvas");
+	img.addEventListener("load", function(){
+		canvas.getContext("2d").drawImage(img, 0, 0);
+	}, false);
+
+	if(conn == null) {
+		connect();
+	}else {
+		disconnect();
+	}
+
+	var leftObj = document.getElementById("left");
+	leftObj.addEventListener("touchstart", function(){
+		robot_control("left");
+	}, false);
+	leftObj.addEventListener("touchend", function(){
+		robot_control("stop");
+	}, false);
+
+	var bottomObj = document.getElementById("bottom");
+	bottomObj.addEventListener("touchstart", function(){
+		robot_control("bottom");
+	}, false);
+	bottomObj.addEventListener("touchend", function(){
+		robot_control("stop");
+	}, false);
+
+	var rightObj = document.getElementById("right");
+	rightObj.addEventListener("touchstart", function(){
+		robot_control("right");
+	}, false);
+	rightObj.addEventListener("touchend", function(){
+		robot_control("stop");
+	}, false);
+
+	var topObj = document.getElementById("top");
+	topObj.addEventListener("touchstart", function(){
+		robot_control("top");
+	}, false);
+	topObj.addEventListener("touchend", function(){
+		robot_control("stop");
+	}, false);
+})
+</script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div class="button" id="left" data-action="left" >左</div>
+<div class="button" id="bottom" data-action="left" >下</div>
+<div class="button" id="right" data-action="left" >右</div>
+<div class="button" id="top" data-action="left">上</div>
+</body>
+</html>

@@ -13,6 +13,16 @@
 		0486A67D1BC3FADB00DA7994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0486A67B1BC3FADB00DA7994 /* Main.storyboard */; };
 		0486A67F1BC3FADB00DA7994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0486A67E1BC3FADB00DA7994 /* Assets.xcassets */; };
 		0486A6821BC3FADB00DA7994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0486A6801BC3FADB00DA7994 /* LaunchScreen.storyboard */; };
+		04A5EF891BC53E8E0059DB43 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A5EF881BC53E8E0059DB43 /* JavaScriptCore.framework */; };
+		04B454FA1BC564FB000C0C33 /* setup_bg_1136x640@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B454F91BC564FB000C0C33 /* setup_bg_1136x640@2x.png */; settings = {ASSET_TAGS = (); }; };
+		04B454FC1BC567E4000C0C33 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B454FB1BC567E4000C0C33 /* Icon-76@2x.png */; settings = {ASSET_TAGS = (); }; };
+		04FD05211BD1618B005A1E8B /* camera.py in Resources */ = {isa = PBXBuildFile; fileRef = 04FD05161BD1618B005A1E8B /* camera.py */; settings = {ASSET_TAGS = (); }; };
+		04FD05231BD1618B005A1E8B /* client.py in Resources */ = {isa = PBXBuildFile; fileRef = 04FD05181BD1618B005A1E8B /* client.py */; settings = {ASSET_TAGS = (); }; };
+		04FD05241BD1618B005A1E8B /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 04FD05191BD1618B005A1E8B /* main.py */; settings = {ASSET_TAGS = (); }; };
+		04FD05251BD1618B005A1E8B /* server.py in Resources */ = {isa = PBXBuildFile; fileRef = 04FD051A1BD1618B005A1E8B /* server.py */; settings = {ASSET_TAGS = (); }; };
+		04FD05271BD1618B005A1E8B /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 04FD051D1BD1618B005A1E8B /* jquery.js */; settings = {ASSET_TAGS = (); }; };
+		04FD05281BD1618B005A1E8B /* sockjs.js in Resources */ = {isa = PBXBuildFile; fileRef = 04FD051E1BD1618B005A1E8B /* sockjs.js */; settings = {ASSET_TAGS = (); }; };
+		04FD05291BD1618B005A1E8B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 04FD05201BD1618B005A1E8B /* index.html */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		0486A67E1BC3FADB00DA7994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0486A6811BC3FADB00DA7994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0486A6831BC3FADB00DA7994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A5EF881BC53E8E0059DB43 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		04B454F91BC564FB000C0C33 /* setup_bg_1136x640@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setup_bg_1136x640@2x.png"; sourceTree = "<group>"; };
+		04B454FB1BC567E4000C0C33 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		04FD05161BD1618B005A1E8B /* camera.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = camera.py; sourceTree = "<group>"; };
+		04FD05181BD1618B005A1E8B /* client.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = client.py; sourceTree = "<group>"; };
+		04FD05191BD1618B005A1E8B /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		04FD051A1BD1618B005A1E8B /* server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
+		04FD051D1BD1618B005A1E8B /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		04FD051E1BD1618B005A1E8B /* sockjs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sockjs.js; sourceTree = "<group>"; };
+		04FD05201BD1618B005A1E8B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A5EF891BC53E8E0059DB43 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,7 @@
 		0486A6661BC3FADB00DA7994 = {
 			isa = PBXGroup;
 			children = (
+				04FD05151BD1618B005A1E8B /* wifi_robot */,
 				0486A6711BC3FADB00DA7994 /* WIFIRobot */,
 				0486A6701BC3FADB00DA7994 /* Products */,
 			);
@@ -74,9 +96,42 @@
 		0486A6721BC3FADB00DA7994 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04A5EF881BC53E8E0059DB43 /* JavaScriptCore.framework */,
+				04B454F91BC564FB000C0C33 /* setup_bg_1136x640@2x.png */,
+				04B454FB1BC567E4000C0C33 /* Icon-76@2x.png */,
 				0486A6731BC3FADB00DA7994 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04FD05151BD1618B005A1E8B /* wifi_robot */ = {
+			isa = PBXGroup;
+			children = (
+				04FD05161BD1618B005A1E8B /* camera.py */,
+				04FD05181BD1618B005A1E8B /* client.py */,
+				04FD05191BD1618B005A1E8B /* main.py */,
+				04FD051A1BD1618B005A1E8B /* server.py */,
+				04FD051C1BD1618B005A1E8B /* stc */,
+				04FD051F1BD1618B005A1E8B /* tpl */,
+			);
+			path = wifi_robot;
+			sourceTree = "<group>";
+		};
+		04FD051C1BD1618B005A1E8B /* stc */ = {
+			isa = PBXGroup;
+			children = (
+				04FD051D1BD1618B005A1E8B /* jquery.js */,
+				04FD051E1BD1618B005A1E8B /* sockjs.js */,
+			);
+			path = stc;
+			sourceTree = "<group>";
+		};
+		04FD051F1BD1618B005A1E8B /* tpl */ = {
+			isa = PBXGroup;
+			children = (
+				04FD05201BD1618B005A1E8B /* index.html */,
+			);
+			path = tpl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +192,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FD05271BD1618B005A1E8B /* jquery.js in Resources */,
 				0486A6821BC3FADB00DA7994 /* LaunchScreen.storyboard in Resources */,
+				04FD05211BD1618B005A1E8B /* camera.py in Resources */,
+				04FD05281BD1618B005A1E8B /* sockjs.js in Resources */,
+				04FD05251BD1618B005A1E8B /* server.py in Resources */,
+				04FD05291BD1618B005A1E8B /* index.html in Resources */,
+				04B454FA1BC564FB000C0C33 /* setup_bg_1136x640@2x.png in Resources */,
 				0486A67F1BC3FADB00DA7994 /* Assets.xcassets in Resources */,
+				04B454FC1BC567E4000C0C33 /* Icon-76@2x.png in Resources */,
+				04FD05241BD1618B005A1E8B /* main.py in Resources */,
 				0486A67D1BC3FADB00DA7994 /* Main.storyboard in Resources */,
+				04FD05231BD1618B005A1E8B /* client.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +326,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WIFIRobot",
+				);
 				INFOPLIST_FILE = WIFIRobot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yan.WIFIRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,7 +343,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WIFIRobot",
+				);
 				INFOPLIST_FILE = WIFIRobot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yan.WIFIRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +375,7 @@
 				0486A6881BC3FADB00DA7994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
